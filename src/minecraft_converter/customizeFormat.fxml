@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minecraft_converter.CustomizeFormatController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <ButtonBar BorderPane.alignment="CENTER">
+              <buttons>
+                  <Button mnemonicParsing="false" onAction="#cancle" text="Cancel" />
+                <Button mnemonicParsing="false" onAction="#save" text="Save" />
+              </buttons>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </ButtonBar>
+         </bottom>
+         <center>
+            <TabPane prefHeight="354.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Normal">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="144.0" layoutY="14.0" text="Suffix of source texture:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="14.0" />
+                              <TextField fx:id="normalSuffix" layoutX="281.0" layoutY="10.0" AnchorPane.leftAnchor="281.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <Label layoutX="15.0" layoutY="76.0" text="how to get the normals from the source texture:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="76.0" />
+                              <Label layoutX="185.0" layoutY="44.0" prefHeight="17.0" text="normals format:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="44.0" />
+                              <ChoiceBox fx:id="normalFormat" layoutX="280.0" layoutY="40.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
+                              <ChoiceBox fx:id="normalChannels" layoutX="280.0" layoutY="72.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="72.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Metallic">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER_RIGHT" layoutX="144.0" layoutY="14.0" text="Suffix of source texture:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="14.0" />
+                                <TextField fx:id="metallicSuffix" layoutX="281.0" layoutY="10.0" AnchorPane.leftAnchor="281.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                <Label alignment="CENTER_RIGHT" layoutX="16.0" layoutY="76.0" text="metallic operation:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="76.0" />
+                                <Label alignment="CENTER_RIGHT" layoutX="185.0" layoutY="44.0" text="metallic channel:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="44.0" />
+                                <ChoiceBox fx:id="metallicChannel" layoutX="280.0" layoutY="40.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
+                                <ChoiceBox fx:id="metallicOperation" layoutX="280.0" layoutY="72.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="72.0" />
+                                <TextField fx:id="metallicOperationExtra" layoutX="280.0" layoutY="104.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="104.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                 <Tab text="Emissive">
+                     <content>
+                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                             <children>
+                                 <Label layoutX="144.0" layoutY="14.0" text="Suffix of source texture:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="14.0" />
+                                 <TextField fx:id="emissiveSuffix" layoutX="281.0" layoutY="10.0" AnchorPane.leftAnchor="281.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                 <Label layoutX="15.0" layoutY="76.0" text="emissive operation:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="76.0" />
+                                 <Label layoutX="185.0" layoutY="44.0" text="emissive channel:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="44.0" />
+                                 <ChoiceBox fx:id="emissiveChannel" layoutX="280.0" layoutY="40.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
+                                 <ChoiceBox fx:id="emissiveOperation" layoutX="280.0" layoutY="72.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="72.0" />
+                                 <TextField fx:id="emissiveOperationExtra" layoutX="280.0" layoutY="104.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="104.0" />
+                             </children>
+                        </AnchorPane>
+                     </content>
+                 </Tab>
+                 <Tab text="Roughness">
+                     <content>
+                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                             <children>
+                                 <Label layoutX="144.0" layoutY="14.0" text="Suffix of source texture:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="14.0" />
+                                 <TextField fx:id="roughnessSuffix" layoutX="281.0" layoutY="10.0" AnchorPane.leftAnchor="281.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                 <Label layoutX="15.0" layoutY="76.0" text="roughness operation:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="76.0" />
+                                 <Label layoutX="185.0" layoutY="44.0" text="roughness chanel:" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="44.0" />
+                                 <ChoiceBox fx:id="roughnessChannel" layoutX="280.0" layoutY="40.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
+                                 <ChoiceBox fx:id="roughnessOperation" layoutX="280.0" layoutY="72.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="72.0" />
+                                 <TextField fx:id="roughnessOperationExtra" layoutX="280.0" layoutY="104.0" prefWidth="150.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="104.0" />
+                             </children>
+                        </AnchorPane>
+                     </content>
+                 </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Preset: " />
+                  <ChoiceBox fx:id="choicePreset" prefWidth="150.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

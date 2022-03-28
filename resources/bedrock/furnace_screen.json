@@ -1,0 +1,43 @@
+{
+  "namespace": "furnace",
+
+  "flame_panel": {
+    "type": "panel",
+    "size": [ 14, 14 ],
+    "offset": [ -22, 0 ],
+    "controls": [
+      {
+        "flame_empty_image@furnace.flame_empty_image": {}
+      },
+      {
+        "flame_full_image@furnace.flame_full_image": {}
+      }
+    ]
+  },
+
+  "furnace_arrow_empty_image": {
+    "type": "image",
+    "layer": 1,
+    "texture": "textures/ui/arrow_inactive",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 24, 17 ]
+  },
+
+  "furnace_arrow_full_image": {
+    "type": "image",
+    "layer": 3,
+    "texture": "textures/ui/arrow_active",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 24, 17 ],
+    "clip_direction": "left",
+    "bindings": [
+      {
+        "binding_name": "#furnace_arrow_ratio",
+        "binding_name_override": "#clip_ratio",
+        "binding_condition": "always"
+      }
+    ]
+  }
+}

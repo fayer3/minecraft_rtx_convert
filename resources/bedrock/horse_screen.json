@@ -1,0 +1,8 @@
+{
+  "namespace": "horse",
+
+  "overlay_image": {
+    "type": "image",
+    "alpha": 1
+  }
+}
